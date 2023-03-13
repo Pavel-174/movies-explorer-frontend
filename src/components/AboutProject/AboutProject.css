@@ -69,10 +69,10 @@
     margin-right: 50px;
   }
   
-  .about__timeline:first-of-type {
+  .about__time:first-of-type {
     width: 20%;
   }
   
-  .about__timeline:last-of-type {
+  .about__time:last-of-type {
     width: 80%;
   }
