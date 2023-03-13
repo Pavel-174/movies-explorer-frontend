@@ -7,21 +7,21 @@ import Profile from '../Profile/Profile';
 import Header from '../Header/Header'
 import './App.css';
 import React from 'react';
-import { Route, Switch } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 
 
 function App() {
   return (
       <div className="App">
         <Header/>
-        <Switch>
-          <Route exact path="/" component={Main} />
+        <Main/>
+        <Routes>
           <Route path="/movies" component={Movies} />
           <Route path="/saved-movies" component={SavedMovies} />
           <Route path="/profile" component={Profile} />
           <Route path="/signin" component={Login}/>
           <Route path="/signup" component={Register} />
-        </Switch>
+        </Routes>
       </div>
   );
 }
