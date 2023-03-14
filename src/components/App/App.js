@@ -8,6 +8,7 @@ import Header from '../Header/Header'
 import './App.css';
 import React from 'react';
 import { Route, Routes } from 'react-router-dom';
+import Footer from '../Footer/Footer';
 
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
           <Route path="/signin" component={Login}/>
           <Route path="/signup" component={Register} />
         </Routes>
+        <Footer/>
       </div>
   );
 }

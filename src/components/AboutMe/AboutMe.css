@@ -25,6 +25,7 @@
   font-weight: 400;
   line-height: 58px;
   letter-spacing: -0.04em;
+  text-align: left;
 }
   
 .about-me__job {
@@ -32,6 +33,7 @@
   font-size: 18px;
   font-weight: 500;
   line-height: 18px;
+  text-align: left;
 }
   
 .about-me__description {
@@ -40,6 +42,7 @@
   font-size: 14px;
   font-weight: 400;
   line-height: 22px;
+  text-align: left;
 }
   
 .about-me__links {
