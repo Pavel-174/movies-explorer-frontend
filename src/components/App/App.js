@@ -9,22 +9,56 @@ import './App.css';
 import React from 'react';
 import { Route, Routes } from 'react-router-dom';
 import Footer from '../Footer/Footer';
+import NotFound from '../NotFound/NotFound';
+import Navigation from '../Navigation/Navigation';
 
 
 function App() {
+
   return (
-      <div className="App">
-        <Header/>
-        <Main/>
-        <Routes>
-          <Route path="/movies" component={Movies} />
-          <Route path="/saved-movies" component={SavedMovies} />
-          <Route path="/profile" component={Profile} />
-          <Route path="/signin" component={Login}/>
-          <Route path="/signup" component={Register} />
-        </Routes>
-        <Footer/>
-      </div>
+    <div className='App'>
+      <Routes>
+        <Route exact path='/' element={
+          <>
+            <Header/>
+            <Main/>
+            <Footer/>
+          </>
+        }/>
+        <Route path='/movies' element={
+          <>
+            <Header/>
+            <Movies/>
+            <Footer/>
+            <Navigation/>
+          </>
+        }/>
+        <Route path='/saved-movies' element={
+          <>
+            <Header/>
+            <SavedMovies/>
+            <Navigation/>
+            <Footer/>
+          </>
+        }/>
+        <Route path='/profile' element={
+          <>
+            <Header/>
+            <Profile/>
+            <Navigation/>
+          </>
+        } />
+        <Route path='/signup' element={
+          <Register/>
+        } />
+        <Route path='/signin' element={
+          <Login/>
+        }/>
+        <Route path="*" element={
+          <NotFound/>
+        }/>
+      </Routes>
+    </div>
   );
 }
 
